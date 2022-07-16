@@ -16,7 +16,7 @@
 
                 <nav class="flex gap-4">
                     <a class="font-bold uppercase text-gray-600 text-sm" href="">Login</a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="/crear-cuenta">Crear Cuenta</a>
+                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('register.index') }}">Crear Cuenta</a>
                 </nav>
             </div>
         </header>
@@ -26,7 +26,7 @@
             @yield('content')
         </main>
 
-        <footer class="text-center p-5 text-gray-500">
+        <footer class="text-center p-5 text-gray-500 mt-16">
             DevStagram - Todos los derechos reservados ({{ now()->year }})
         </footer>
        
