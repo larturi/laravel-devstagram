@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -27,6 +28,7 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 // Login Routes
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+Route::get('/logout', [LogoutController::class, 'store'])->name('logout');
 
 // Muro Routes
 Route::get('/muro', [PostController::class, 'index'])->name('posts.index');

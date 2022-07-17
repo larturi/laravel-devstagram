@@ -15,8 +15,12 @@
                 </h1>
 
                 <nav class="flex gap-4">
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('login') }}">Login</a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('register.index') }}">Crear Cuenta</a>
+                    @auth
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('logout') }}">Cerrar Sesión</a>
+                    @else
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('login') }}">Login</a>
+                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('register.index') }}">Crear Cuenta</a>
+                    @endauth
                 </nav>
             </div>
         </header>
