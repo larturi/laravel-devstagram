@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel Devstagram</title>
         @vite('resources/css/app.css')
+        @vite('resources/js/app.js')
     </head>
     <body class="bg-gray-100">
        
@@ -16,7 +17,10 @@
 
                 <nav class="flex gap-4 items-center">
                     @auth
-                        <a class="font-bold text-gray-600 text-sm">
+                        <a 
+                            class="font-bold text-gray-600 text-sm"
+                            href="{{ route('posts.index', auth()->user()->username) }}"
+                        >
                             Hola
                             <span class="font-normal">{{ '@' . auth()->user()->username }}</span>
                         </a>

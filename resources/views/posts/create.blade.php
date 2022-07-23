@@ -5,9 +5,15 @@
 @endsection
 
 @section('content')
-    <div class="md:flex md:items-center">
+    <div class="md:flex md:items-center gap-6">
         <div class="md:w-1/2">
-            Imagen aqui
+            <form 
+                id="dropzone" 
+                action="/images"
+                method="POST"
+                class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
+
+            </form>
         </div>
         <div class="md:w-1/2 rounded-lg bg-white shadow-lg m-5 md:m-0 p-7 mt-10 md:mt-0">
             <form action="{{ route('register.store') }}" method="post" novalidate>
