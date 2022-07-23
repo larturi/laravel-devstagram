@@ -102,7 +102,7 @@
                     value="Crear Cuenta"
                     class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer 
                             uppercase font-bold w-full p-3 text-white runded-md"
-                >
+                />
             </form>
         </div>
     </div>
