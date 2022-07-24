@@ -4,19 +4,27 @@
     Crea una nueva publicación
 @endsection
 
+@push('styles')
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+@endpush
+
+@vite('resources/js/dropzone.js')
+
 @section('content')
     <div class="md:flex md:items-center gap-6">
         <div class="md:w-1/2">
             <form 
-                id="dropzone" 
-                action="/images"
+                id="dropzone"
+                action="{{ route('imagenes.store') }}" 
                 method="POST"
-                class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center">
-
+                enctype="multipart/form-data"
+                class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center"
+            >
+                @csrf
             </form>
         </div>
         <div class="md:w-1/2 rounded-lg bg-white shadow-lg m-5 md:m-0 p-7 mt-10 md:mt-0">
-            <form action="{{ route('register.store') }}" method="post" novalidate>
+            <form action="{{ route('posts.store') }}" method="post" novalidate>
                 @csrf
                 <div class="mb-5">
                     <label for="title" class="mb-2 block uppercase text-gray-500 font-bold">
@@ -30,7 +38,7 @@
                         class="border p-3 w-full rounded-md @error('title') border-red-500 @enderror"
                         value="{{ old('title') }}"
                     >
-                    @error('titulo')
+                    @error('title')
                         <p class="bg-red-500 text-white my-2 rounded-md text-sm p-2 text-center">{{ $message }}</p>
                     @enderror
                 </div>
@@ -47,6 +55,17 @@
                         class="border p-3 w-full rounded-md @error('description') border-red-500 @enderror"
                     >{{ old('description') }}</textarea>
                     @error('description')
+                        <p class="bg-red-500 text-white my-2 rounded-md text-sm p-2 text-center">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <input
+                        name="image"
+                        type="hidden"
+                        value="{{ old('image') }}"
+                    />
+                    @error('image')
                         <p class="bg-red-500 text-white my-2 rounded-md text-sm p-2 text-center">{{ $message }}</p>
                     @enderror
                 </div>

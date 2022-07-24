@@ -30,4 +30,11 @@ Clon de Instagram con Laravel 9, MySQL, Tailwind, JetStream
 ./vendor/bin/sail php artisan migrate:fresh --seed
 ```
 
+### Crear Posts con Tinker
+
+```bash
+./vendor/bin/sail artisan tinker
+App\Models\Post::factory(200)->create();
+```
+
 #### Made with ❤️ by Leandro Arturi
