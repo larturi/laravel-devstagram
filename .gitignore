@@ -13,3 +13,10 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+# DO-NOT ignore specific file
+!public/img/template1.jpg
+!public/img/template2.jpg
+!public/img/template3.jpg
+!public/img/template4.jpg
+!public/img/template5.jpg
