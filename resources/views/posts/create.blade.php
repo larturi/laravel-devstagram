@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 @endpush
 
-@vite('resources/js/dropzone.js')
 
 @section('content')
     <div class="md:flex md:items-center gap-6">

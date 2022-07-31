@@ -24,9 +24,6 @@ const dropzone = new Dropzone('#dropzone', {
     }
 });
 
-dropzone.on('sending', function(file, xhr, formdata) {
-    // 
-});
 
 dropzone.on('success', function(file, response) {
     document.querySelector('[name="image"]').value = response.imagen;
