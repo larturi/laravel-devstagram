@@ -6,4 +6,8 @@
         max-width: 200px;
         margin: 0 auto;
     }
+
+    .img-post {
+        width: 75%;
+    }
 }
