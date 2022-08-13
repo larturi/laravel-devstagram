@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File; 
 
 class PerfilController extends Controller
 {
@@ -34,6 +35,11 @@ class PerfilController extends Controller
         ]);
 
         if($request->imagen) {
+
+            // Eliminar la vieja imagen
+            File::delete(public_path('perfiles') . "/" . auth()->user()->imagen);
+
+            // Guardar la nueva imagen
             $imagen = $request->file('imagen');
             $nombreImagen = Str::uuid() . "." . $imagen->extension();
             $imagenServidor = Image::make($imagen);
