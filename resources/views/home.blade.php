@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-  Bienvenido
+   <x-listar-posts :posts="$posts" />
 @endsection

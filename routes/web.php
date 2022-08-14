@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('principal');
-});
+// Home
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Register routes
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
