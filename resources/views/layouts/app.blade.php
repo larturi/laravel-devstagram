@@ -13,6 +13,8 @@
           @vite('resources/js/dropzone.js')
         @endif
 
+        @livewireStyles
+
         <title>Laravel Devstagram</title>
     </head>
     <body class="bg-gray-100">
@@ -73,6 +75,8 @@
         <footer class="text-center p-5 text-gray-500 mt-16">
             DevStagram - Todos los derechos reservados ({{ now()->year }})
         </footer>
+
+        @livewireScripts
        
     </body>
 </html>

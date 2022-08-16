@@ -9,11 +9,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Personas a las que sigue el usuario
-        $idsFollowings = auth()->user()->following->pluck('id')->toArray();
+        if(auth()->user()) {
+            // Personas a las que sigue el usuario
+            $idsFollowings = auth()->user()->following->pluck('id')->toArray();
 
-        // Posts de las personas a las que sigue el usuario
-        $posts = Post::whereIn('user_id', $idsFollowings)->paginate(20);
+            // Posts de las personas a las que sigue el usuario
+            $posts = Post::whereIn('user_id', $idsFollowings)->paginate(20);
+        } else {
+            $posts = [];
+        }
 
         return view('home', compact('posts'));
     }
