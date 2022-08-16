@@ -1,6 +1,6 @@
 <div>
   @if (count($posts) > 0 && $posts->count())
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 container-posts">
         @foreach ($posts as $post)
             <div>
                 <a href="{{ route('posts.show', [

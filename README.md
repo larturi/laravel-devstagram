@@ -4,7 +4,7 @@ Clon de Instagram con Laravel 9, MySQL, Tailwind, JetStream
 
 ## 🚀 Quick start
 
-### Levantar Docker e instalar jetstream
+### Levantar Docker Sail
 
 ```bash
 composer update

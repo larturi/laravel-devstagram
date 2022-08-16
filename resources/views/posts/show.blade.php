@@ -38,7 +38,7 @@
             @endauth
         </div>
 
-        <div class="md:w-1/2 p-5">
+        <div class="md:w-1/2 mt-5 md:p-5 md:mt-0">
 
             <div class="shadow bg-white p-5 mb-5">
 

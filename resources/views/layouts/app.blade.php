@@ -20,15 +20,15 @@
     <body class="bg-gray-100">
        
         <header class="p-5 border-b bg-white shadow">
-            <div class="container mx-auto flex justify-between items-center">
-                <a href="{{ route('home') }}" class="text-3xl font-black">
+            <div class="container mx-auto flex justify-between items-center menu">
+                <a href="{{ route('home') }}" class="text-3xl font-black logo">
                     DevStagram
                 </a>
 
                 <nav class="flex gap-4 items-center">
                     @auth
                         <a 
-                            class="font-bold text-gray-600 text-sm"
+                            class="font-bold text-gray-600 text-sm item-menu username"
                             href="{{ route('posts.index', auth()->user()->username) }}"
                         >
                             Hola
@@ -37,7 +37,7 @@
 
                         <a 
                             href="{{ route('posts.create') }}"
-                            class="flex items-center gap-2 bg-white border p-2 text-gray-600 rounded text-sm uppercase font-bold cursor-pointer"
+                            class="flex items-center gap-2 bg-white border p-2 text-gray-600 button-menu rounded text-sm uppercase font-bold cursor-pointer"
                         >
                             {{-- https://heroicons.com/ --}}
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -60,8 +60,8 @@
                             </button>
                         </form>
                     @else
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('login') }}">Login</a>
-                        <a class="font-bold uppercase text-gray-600 text-sm" href="{{ route('register.index') }}">Crear Cuenta</a>
+                        <a class="font-bold uppercase item-navbar text-gray-600 text-sm" href="{{ route('login') }}">Login</a>
+                        <a class="font-bold uppercase item-navbar text-gray-600 text-sm" href="{{ route('register.index') }}">Crear Cuenta</a>
                     @endauth
                 </nav>
             </div>
