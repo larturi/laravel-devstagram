@@ -39,6 +39,9 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::get('/editar-perfil', [PerfilController::class, 'index'])->name('perfil.index');
 Route::post('/editar-perfil', [PerfilController::class, 'store'])->name('perfil.store');
 
+// Users Follow
+Route::get('/users', [FollowerController::class, 'show'])->name('users.show');
+
 // Post Routes
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
@@ -59,5 +62,4 @@ Route::post('/imagenes', [ImagenController::class, 'store'])->name('imagenes.sto
 // Followers Routes
 Route::post('/{user:username}/follow', [FollowerController::class, 'store'])->name('users.follow');
 Route::delete('/{user:username}/unfollow', [FollowerController::class, 'destroy'])->name('users.unfollow');
-
 

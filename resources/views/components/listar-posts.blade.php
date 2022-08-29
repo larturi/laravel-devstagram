@@ -17,6 +17,6 @@
         {{ $posts->links('pagination::tailwind') }}
     </div>
   @else
-    <p class="text-center">No hay posts. Sigue a alguien para poder ver sus posts.</p> 
+    <p class="text-center">No hay posts</p>
   @endif
 </div>
