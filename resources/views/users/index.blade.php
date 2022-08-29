@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         
-                        <div class="w-12/12 my-2 ml-2 p-1 mr-5">
+                        <div class="w-12/12 my-2 px-5 mb-5 lg:ml-2 lg:mr-5">
                             <form
                                 method="post"
                                 action="{{ route('users.follow', $user) }}"
