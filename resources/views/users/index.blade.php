@@ -22,7 +22,7 @@
                             >
 
                             <div class="w-9/12 my-2 ml-2 p-2">
-                                <a class="font-bold">
+                                <a class="font-bold" href="{{ route('posts.index', $user) }}">
                                     {{ '@' . $user->username }}
                                 </a>
                                 <p>{{ $user->email }}</p>
