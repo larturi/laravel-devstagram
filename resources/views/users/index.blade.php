@@ -14,11 +14,11 @@
                 <p class="text-center mt-6">No hay nuevos usuarios para seguir</p>
             @else
                 @foreach ($allUsers as $user)
-                    <div class="bg-white shadow mb-5 mt-5 overflow-y-scroll md:flex md:justify-between gap-2">
+                    <div class="bg-white shadow mb-5 mt-5 overflow-y-scroll lg:flex lg:justify-between gap-2">
                         <div class="my-2 ml-2 p-2 flex justify-between gap-2">
                             <img 
                                 src="{{ $user->imagen ? asset('perfiles') . '/' . $user->imagen : asset('img/usuario.svg') }}" 
-                                class="w-3/12 img-responsive img-profile rounded-full border border-gray-100 shadow-sm" alt="Foto perfil"
+                                class="w-3/12 img-responsive img-profile rounded-full" alt="Foto perfil"
                             >
 
                             <div class="w-9/12 my-2 ml-2 p-2">
@@ -38,7 +38,7 @@
                                 <input 
                                     type="submit"
                                     value="Seguir"
-                                    class="bg-blue-600 lg:mt-10 text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
+                                    class="bg-blue-600 lg:mt-10 w-full text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
                                 >
                             </form>
                         </div>
@@ -54,11 +54,11 @@
                <p class="text-center mt-6">Aun no sigues a nadie</p>
             @else
                 @foreach ($siguiendoUsers as $siguiendoUser)
-                    <div class="bg-white shadow mb-5 mt-5 overflow-y-scroll md:flex md:justify-between gap-2">
+                    <div class="bg-white shadow mb-5 mt-5 overflow-y-scroll lg:flex lg:justify-between gap-2">
                         <div class="my-2 ml-2 p-2 flex justify-between gap-2">
                             <img 
                                 src="{{ $siguiendoUser->imagen ? asset('perfiles') . '/' . $siguiendoUser->imagen : asset('img/usuario.svg') }}" 
-                                class="w-3/12 img-responsive img-profile rounded-full border border-gray-100 shadow-sm" alt="Foto perfil"
+                                class="w-3/12 img-responsive img-profile rounded-full" alt="Foto perfil"
                             >
     
                             <div class="w-9/12 my-2 ml-2 p-2">
@@ -79,7 +79,7 @@
                                 <input 
                                     type="submit"
                                     value="Dejar de Seguir"
-                                    class="bg-red-600 lg:mt-10 text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
+                                    class="bg-red-600 lg:mt-10 w-full text-white uppercase rounded-lg px-3 py-1 text-xs font-bold cursor-pointer"
                                 >
                             </form>
                         </div>
